@@ -1,3 +1,29 @@
+//////////////////////////////////////////////////////////////
+//                                                          //
+//  Project: Temperature-controlled Relay System            //
+//  Author: Deerpfy                                         //
+//  Date: 15th September 2024                               //
+//                                                          //
+//  Description:                                            //
+//  This project uses an ESP32 to monitor the temperature   //
+//  from a DHT11 sensor and control a relay (simulated      //
+//  using an LED). The ESP32 hosts a web server for manual  //
+//  control and to display current temperature data.        //
+//                                                          //
+//  Pin Configuration:                                      //
+//  - DHT11 Sensor:                                         //
+//    - Data Pin -> GPIO 4 (DHTPIN)                         //
+//                                                          //
+//  - Relay (simulated using an LED):                       //
+//    - Control Pin -> GPIO 2 (RELAY_PIN)                   //
+//                                                          //
+//  - WiFi credentials:                                     //
+//    - Loaded from an external file ("wifi_credentials.h").//
+//                                                          //
+//////////////////////////////////////////////////////////////
+
+//----------------------------------------------------------//
+
 #include "WiFi.h"
 #include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
